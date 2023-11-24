@@ -12,6 +12,7 @@ def plot_images(images):
         torch.cat([i for i in images.cpu()], dim=-1),
     ], dim=-2).permute(1, 2, 0).cpu())
     plt.show()
+    plt.savefig('results.png')
 
 
 def save_images(images, path, **kwargs):
